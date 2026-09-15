@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6546d7">
+  <meta name="description" content="Jogo educativo para crianças completarem palavras com letras faltantes.">
+  <title>Complete a Palavra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+    <div class="intro-card">
+      <h2 id="introTitle">Vamos aprender? 🌟</h2>
+      <p>Veja e ouça uma demonstração rápida antes de começar.</p>
+      <div class="demo-picture" role="img" aria-label="Pato">🦆</div>
+      <div class="demo-word" aria-label="Exemplo da palavra pato">
+        <div id="demoP" class="demo-letter">P</div>
+        <div id="demoA" class="demo-letter">A</div>
+        <div id="demoT" class="demo-letter gap">?</div>
+        <div id="demoO" class="demo-letter gap">?</div>
+      </div>
+      <div class="demo-choices">
+        <button class="demo-choice" data-demo="T" aria-label="Letra T">T</button>
+        <button class="demo-choice" data-demo="O" aria-label="Letra O">O</button>
+        <button class="demo-choice" data-demo="X" aria-label="Letra X">X</button>
+      </div>
+      <div id="audioStatus" class="audio-status"></div>
+      <p id="introMsg"></p>
+      <div class="intro-actions">
+        <button class="intro-btn listen" id="listenDemo">🔊 Ouvir demonstração</button>
+        <button class="intro-btn begin" id="beginGame">▶ Começar jogo</button>
+      </div>
+    <footer>
+      <p>Copyright © 2026 PcTech by Sinnomar Lino</p>
+    </footer>
+    </div>
+  
+  </section>
+
+  <main>
+    <header>
+      <div class="brand">
+        <div class="logo">🎓</div>
+        <div>
+          <h1>Complete a Palavra</h1>
+          <small>Educativo</small>
+        </div>
+      </div>
+      <div class="score">
+        <span>Pontos</span>
+        <strong id="score">0</strong>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="progress">
+        <div id="progress"></div>
+      </div>
+
+      <div class="topline">
+        <span class="category" id="category">Categoria</span>
+        <span id="round">Palavra 1 de 10</span>
+        <span class="attempts" id="attempts">Erros: ○ ○ ○</span>
+      </div>
+
+      <div class="picture" id="picture" role="img">🦆</div>
+      <p class="instruction">Clique ou toque nas letras que faltam</p>
+
+      <div class="reading">
+        <button class="read-btn" id="readWord">🔊 Ouvir palavra</button>
+        <span class="syllables" id="syllables">PA • TO</span>
+      </div>
+
+      <div class="word" id="word"></div>
+
+      <div class="choices" id="choices"></div>
+
+      <div class="message" id="message"></div>
+
+      <button class="next" id="next">Próxima palavra →</button>
+
+      <div class="confetti" id="confetti"></div>
+    <footer>
+      <p>Aprenda brincando! 🎮 | Desenvolvido para educação infantil!</p>
+       <p>Copyright © 2026 PcTech by Sinnomar Lino</p>
+    </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
